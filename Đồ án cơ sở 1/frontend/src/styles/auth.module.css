@@ -1,0 +1,14 @@
+.h1 {
+    text-align: center;
+    white-space: nowrap;
+}
+.h2 {
+    text-align: center;
+}
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50% 0 0 0;
+}
