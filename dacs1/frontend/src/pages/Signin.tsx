@@ -11,11 +11,13 @@ function Signin(){
     
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
-        setform({
-            ...form,
+        setform((prev) => ({
+            ...prev,
             [name]: value
-        })
+        }))
+        setApiStatus(form.email + ' ' + form.password)
     }
+
     const PostData = async () => {
         try {
             setApiStatus('Đang kết nối đến server...')
@@ -53,6 +55,7 @@ function Signin(){
             alert('Error connecting to server');
         }
     }
+
     return (
         <div className={styles.signin_container}>
             <h1>This is sign in page</h1>
